@@ -1,10 +1,22 @@
 @import "tailwindcss";
 
+/* Ocean Professional theme tokens + a few reusable utility classes.
+   We keep Tailwind available, but rely on stable CSS variables for theme consistency. */
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text: #111827;
+
+  --primary: #2563eb;
+  --success: #f59e0b;
+  --error: #ef4444;
+
+  --border: rgba(17, 24, 39, 0.12);
+  --muted: rgba(17, 24, 39, 0.62);
+  --shadow: 0 10px 25px rgba(17, 24, 39, 0.08);
+  --shadow-sm: 0 6px 16px rgba(17, 24, 39, 0.08);
+
+  --radius: 14px;
 }
 
 * {
@@ -17,10 +29,55 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--color-background);
-  color: var(--color-primary);
+  background: var(--bg);
+  color: var(--text);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--primary) 85%, white);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* Page background with subtle gradient (from-blue-500/10 to-gray-50) */
+.appShellBg {
+  background:
+    radial-gradient(
+      1200px 600px at 20% 0%,
+      rgba(37, 99, 235, 0.10),
+      rgba(249, 250, 251, 0) 60%
+    ),
+    linear-gradient(180deg, rgba(249, 250, 251, 1), rgba(249, 250, 251, 1));
+}
+
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.subtleText {
+  color: var(--muted);
+}
+
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 12px;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 90%, var(--bg));
 }

@@ -1,0 +1,146 @@
+.editor {
+  flex: 1;
+  height: calc(100dvh - 24px);
+  margin: 12px 12px 12px 0;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.headerLeft {
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hTitle {
+  font-weight: 1000;
+  font-size: 16px;
+}
+
+.hSubtle {
+  font-size: 12px;
+  color: rgba(17, 24, 39, 0.62);
+  margin-top: 6px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.body {
+  flex: 1;
+  overflow: auto;
+  display: grid;
+  gap: 12px;
+  padding-right: 4px;
+}
+
+.previewWrap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(249, 250, 251, 0.6);
+  padding: 12px;
+  min-height: 260px;
+}
+
+.preview {
+  color: rgba(17, 24, 39, 0.92);
+  line-height: 1.55;
+}
+
+.preview h1 {
+  font-size: 22px;
+  margin: 8px 0 10px;
+}
+
+.preview h2 {
+  font-size: 18px;
+  margin: 8px 0 10px;
+}
+
+.preview h3 {
+  font-size: 16px;
+  margin: 8px 0 10px;
+}
+
+.preview p {
+  margin: 8px 0;
+}
+
+.preview code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.preview :global(.mdSpacer) {
+  height: 10px;
+}
+
+.empty {
+  flex: 1;
+  height: calc(100dvh - 24px);
+  margin: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.emptyCard {
+  max-width: 560px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.emptyTitle {
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.emptyDesc {
+  margin-top: 6px;
+  color: rgba(17, 24, 39, 0.62);
+  line-height: 1.4;
+}
+
+.emptyActions {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.shortcuts {
+  font-size: 12px;
+  color: rgba(17, 24, 39, 0.6);
+}
